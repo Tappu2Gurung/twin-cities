@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <application>
+        <name>Twin and Sister Cities</name>
+        <version>1.0</version>
+        <base_url>http://localhost/twin-cities</base_url>
+    </application>
+
+    <database>
+        <host>localhost</host>
+        <name>twin_cities</name>
+        <user>root</user>
+        <password></password>
+        <charset>utf8mb4</charset>
+    </database>
+
+    <apis>
+        <api name="weather">
+            <provider>Open-Meteo</provider>
+            <base_url>https://api.open-meteo.com/v1/forecast</base_url>
+            <key></key><!-- Open-Meteo is free, no key needed -->
+        </api>
+        <api name="mapping">
+            <provider>Leaflet + OpenStreetMap</provider>
+            <tile_url>https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png</tile_url>
+            <key></key><!-- No key needed -->
+        </api>
+        <api name="photos">
+            <provider>Unsplash</provider>
+            <base_url>https://api.unsplash.com</base_url>
+            <key>FiKYXJ30YYdWPcnws8tEZNEsjQoN8LmIQII30DPXaMU</key><!-- Replace with your new key -->
+        </api>
+        <api name="geocoding">
+            <provider>Nominatim</provider>
+            <base_url>https://nominatim.openstreetmap.org</base_url>
+            <key></key>
+        </api>
+    </apis>
+
+    
+
+    <cities>
+        <home>Birmingham</home>
+        <twins>
+            <twin>Frankfurt</twin>
+            <twin>Lyon</twin>
+        </twins>
+    </cities>
+</config>
